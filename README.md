@@ -20,7 +20,7 @@ This project uses the MPLAB® Code Configurator (MCC) Melody graphical programmi
 - [MCC Melody API Reference for AVR MCU Families Version 14](https://onlinedocs.microchip.com/oxy/GUID-41EA2496-1EE8-4319-A387-9EC9318EF178-en-US-14/GUID-F7F7BDF5-134D-4F8A-B6A7-D368C8DDA312.html)
 
 
-## Software Used
+## Software Used 
 
 - [MPLAB® X IDE 6.1.0](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_avrdb&utm_content=avr128db48-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08) or newer
 - [MPLAB® XC8 2.41.0](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_avrdb&utm_content=avr128db48-basic-uart-comms-mplab-mcc-github&utm_bu=MCU08) or newer
@@ -102,12 +102,12 @@ Go to *Project Resources>System>Pins* to open the associated **Easy View**.
 
 ![Rename Pins](images/renamePins.png)
 
-Note from the Curiosity Nano schematics that the SW0 is active LOW and connected directly to pin PB2 through a current limiting resistor. To eliminate unknown states, the switch pin will need to have a pull-up resistor. The AVR128DB48 device family features integrated *Weak PullUps* which can be enabled by checking the box for the associated pin in the Weak Pullup column of the **Easy View**:
+Note from the Curiosity Nano schematics that the SW0 is active-LOW and connected directly to pin PB2 through a current limiting resistor. To eliminate unknown states, the switch pin will need to have a pull-up resistor. The AVR128DB48 device family features integrated *Weak PullUps* which can be enabled by checking the box for the associated pin in the Weak Pullup column of the **Easy View**:
 
 
 ![Enabling Weak Pullups](images/enableWeakPullups.png)
 
-An Input/Sense Configuration (ISC) will be generated when the voltage on the pin associated with SW0 changes. Since the switch on the Curiosity Nano board is active LOW, this means that the switch resting state will be HIGH until pressed. Therefore, the Input/Sense Configuration column setting for the SW0 pin is configured to trigger on the Sense Falling Edge transition of the pin voltage using the drop-down menu:
+An Input/Sense Configuration (ISC) will be generated when the voltage on the pin associated with SW0 changes. Since the switch on the Curiosity Nano board is active-LOW, this means that the switch resting state will be HIGH until pressed. Therefore, the Input/Sense Configuration column setting for the SW0 pin is configured to trigger on the Sense Falling Edge transition of the pin voltage using the drop-down menu:
 
 
 ![Enabling Sense Falling Edge](images/negativeISC.png)
